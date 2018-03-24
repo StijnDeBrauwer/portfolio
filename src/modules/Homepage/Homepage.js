@@ -1,4 +1,5 @@
 import React from 'react';
+import MenuHeader from "../../components/generic/MenuHeader/MenuHeader";
 
 
 
@@ -8,6 +9,9 @@ class Homepage extends React.Component {
         const {welcomeMessage} = this.props;
         return(
         <div>
+
+
+            <MenuHeader/>
             <p>{welcomeMessage}</p>
 
         </div>
