@@ -1,0 +1,173 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:import/typescript",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "import",
+    "node",
+    "eslint-plugin-jsdoc",
+    "eslint-plugin-prefer-arrow",
+    "eslint-plugin-react",
+    "prettier",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "@typescript-eslint/adjacent-overload-signatures": "error",
+    "@typescript-eslint/array-type": [
+      "error",
+      {
+        "default": "array-simple"
+      }
+    ],
+    "@typescript-eslint/await-thenable": "error",
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          "Boolean": {
+            "message": "Avoid using the `Boolean` type. Did you mean `boolean`?"
+          },
+          "Function": {
+            "message": "Avoid using the `Function` type. Prefer a specific function type, like `() => void`."
+          },
+          "Number": {
+            "message": "Avoid using the `Number` type. Did you mean `number`?"
+          },
+          "Object": {
+            "message": "Avoid using the `Object` type. Did you mean `object`?"
+          },
+          "String": {
+            "message": "Avoid using the `String` type. Did you mean `string`?"
+          },
+          "Symbol": {
+            "message": "Avoid using the `Symbol` type. Did you mean `symbol`?"
+          }
+        }
+      }
+    ],
+    "@typescript-eslint/consistent-type-assertions": "error",
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/explicit-member-accessibility": [
+      "error",
+      {
+        "accessibility": "no-public"
+      }
+    ],
+    "@typescript-eslint/member-delimiter-style": [
+      "error",
+      {
+        "multiline": {
+          "delimiter": "semi",
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "semi",
+          "requireLast": false
+        }
+      }
+    ],
+    "@typescript-eslint/naming-convention": "off",
+    "@typescript-eslint/no-empty-interface": "warn",
+    "@typescript-eslint/no-extra-non-null-assertion": "error",
+    "@typescript-eslint/no-misused-new": "warn",
+    "@typescript-eslint/no-namespace": "error",
+    "@typescript-eslint/no-this-alias": "error",
+    "@typescript-eslint/no-unnecessary-qualifier": "error",
+    "@typescript-eslint/no-unnecessary-type-assertion": "error",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-var-requires": "error",
+    "@typescript-eslint/prefer-for-of": "error",
+    "@typescript-eslint/prefer-function-type": "error",
+    "@typescript-eslint/prefer-namespace-keyword": "error",
+    "@typescript-eslint/triple-slash-reference": [
+      "error",
+      {
+        "lib": "always",
+        "path": "always",
+        "types": "prefer-import"
+      }
+    ],
+    "@typescript-eslint/type-annotation-spacing": "error",
+    "@typescript-eslint/unified-signatures": "error",
+    // TODO Remove line below (defaults to error)
+    "arrow-body-style": "off",
+    "consistent-return": "off",
+    "id-denylist": [
+      "error",
+      "any",
+      "Number",
+      "number",
+      "String",
+      "string",
+      "Boolean",
+      "boolean",
+      "Undefined",
+      "undefined"
+    ],
+    "import/no-deprecated": "warn",
+    "import/no-relative-parent-imports": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": [["builtin", "external"], ["internal", "parent"], "sibling"],
+        "newlines-between": "always"
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "jsdoc/check-alignment": "error",
+    "jsdoc/check-indentation": "error",
+    "jsdoc/newline-after-description": "error",
+    "max-classes-per-file": ["error", 1],
+    "newline-before-return": "error",
+    "no-control-regex": "error",
+    "no-duplicate-imports": "error",
+    "no-nested-ternary": "error",
+    "no-sequences": "error",
+    "no-template-curly-in-string": "error",
+    "no-unneeded-ternary": "error",
+    "node/handle-callback-err": ["error", "^(err|error)$"],
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "next": "return",
+        "prev": "*"
+      }
+    ],
+    "prefer-arrow/prefer-arrow-functions": "warn",
+    "prettier/prettier": "warn",
+    "radix": "error",
+    "react/destructuring-assignment": "warn",
+    "react/jsx-closing-bracket-location": [
+      "error",
+      {
+        "selfClosing": "line-aligned",
+        "nonEmpty": "after-props"
+      }
+    ],
+    "react/jsx-indent": ["off", "tab"],
+    "react/jsx-indent-props": ["error", "tab"],
+    "react/jsx-key": "error"
+  },
+  "settings": {
+    "import/internal-regex": "^src/.+"
+  }
+}
