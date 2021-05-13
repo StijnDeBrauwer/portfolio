@@ -20,6 +20,8 @@ export const StyledHomeSection = styled.div`
   @media ${Metrics.mediaQueries.tablet} {
     background-image: url(${Images.homeDesktop}),
       linear-gradient(10deg, rgba(40, 48, 48, 1) 14%, rgba(57, 85, 91, 1) 100%);
+
+    justify-content: flex-start;
   }
 `;
 
@@ -38,6 +40,16 @@ export const WelcomeMessage = styled.p`
 
   @media ${Metrics.mediaQueries.mobileL} {
     font-size: ${Fonts.sizes.xlarge};
+  }
+
+  @media ${Metrics.mediaQueries.tablet} {
+    text-align: left;
+
+    padding: 30vh 0 0 28vw;
+
+
+    color: ${Colors.white};
+    font-size: ${Fonts.sizes.xxlarge};
   }
 
   b{
