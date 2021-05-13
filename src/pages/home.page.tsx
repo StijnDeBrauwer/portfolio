@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-import Header from 'src/components/navigation/header/header.component';
+import HomeSection from 'src/components/sections/home/home.component';
+import Hamburger from 'src/components/navigation/hamburger/hamburger.component';
 
 const HomePage = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <div>
-      <Header />
+      <Hamburger open={open} setOpen={setOpen} />
+      <HomeSection />
     </div>
   );
 };
