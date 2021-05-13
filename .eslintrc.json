@@ -164,7 +164,6 @@
       }
     ],
     "react/jsx-indent": ["off", "tab"],
-    "react/jsx-indent-props": ["error", "tab"],
     "react/jsx-key": "error"
   },
   "settings": {
