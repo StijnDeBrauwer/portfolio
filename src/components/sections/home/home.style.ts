@@ -25,11 +25,11 @@ export const StyledHomeSection = styled.div`
   }
 `;
 
-export const WelcomeMessage = styled.p`
+export const WelcomeMessage = styled.p<{state: TransitionStatus}>`
   text-align: center;
   
   font-size: ${Fonts.sizes.regular};
-  padding: 0 21vw;
+  padding: 0 20vw;
 
   white-space: pre-wrap;
   line-height: 1.5;
@@ -45,7 +45,7 @@ export const WelcomeMessage = styled.p`
   @media ${Metrics.mediaQueries.tablet} {
     text-align: left;
 
-    padding: 30vh 0 0 28vw;
+    padding: 25vh 0 0 28vw;
 
 
     color: ${Colors.white};
@@ -55,13 +55,52 @@ export const WelcomeMessage = styled.p`
   b{
     color ${Colors.accent}
   }
-`;
 
-export const WelcomeMessageAnimation = styled(WelcomeMessage)<{
-  state: TransitionStatus;
-}>`
   transition: 1s;
-  opacity: ${({state}) => (state === 'entered' ? 1 : 0)};
+  opacity: ${({state}) => (state === 'entered' || state === 'exiting' ? 1 : 0)};
   display: ${({state}) =>
     state === 'exited' || state === 'exiting' ? 'none' : 'block'};
+`;
+
+export const StyledIcon = styled.div<{
+  state: TransitionStatus;
+}>`
+  position: absolute;
+  bottom: 35vh;
+  left: 0;
+  right: 0;
+
+  text-align: center;
+
+  @media ${Metrics.mediaQueries.tablet} {
+    display: none;
+    animation: unset;
+  }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 1s;
+  opacity: ${({state}) => (state === 'entered' ? 1 : 0)};
+
+  animation: MoveUpDown 1s linear 6s;
+
+  @keyframes MoveUpDown {
+    0%,
+    100% {
+      bottom: 35vh;
+    }
+    50% {
+      bottom: calc(35vh + 10px);
+    }
+  }
+`;
+
+export const StyledButtonContainer = styled.div<{
+  state: TransitionStatus;
+}>`
+  margin: 1rem 0 0 28vw;
+  transition: 1s;
+  opacity: ${({state}) => (state === 'entered' ? 1 : 0)};
 `;
