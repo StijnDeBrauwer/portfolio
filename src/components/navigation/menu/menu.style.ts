@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
+import {Colors} from 'src/assets';
+
 export const StyledMenu = styled.nav<{open: boolean}>`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: var(--color-primary);
+  background ${Colors.primary};
   transform: ${({open}) => (open ? 'translateX(0)' : 'translateX(-100%)')};
   height: 100vh;
   box-shadow: ${({open}) => (open ? '5px 0 5px -2px rgba(0,0,0,.5)' : 'unset')};
@@ -24,13 +26,13 @@ export const StyledMenu = styled.nav<{open: boolean}>`
     height: 100%;
     z-index: 1;
   }
-  a {
+  .menu__link {
     font-size: 1.25rem;
     text-transform: uppercase;
     padding: 2rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
-    color: var(--color-text);
+    color: ${Colors.white};
     text-decoration: none;
     transition: color 0.3s linear;
     @media (max-width: ${({theme}) => theme.mobile}) {
@@ -38,7 +40,7 @@ export const StyledMenu = styled.nav<{open: boolean}>`
       text-align: center;
     }
     &:hover {
-      color: var(--color-accent);
+      color:${Colors.accent};
     }
   }
 `;

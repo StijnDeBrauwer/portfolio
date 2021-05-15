@@ -1,7 +1,8 @@
 export const PortfolioRoutes: {[key: string]: string} = {
   HOME: 'home',
   ABOUT: 'about',
-  RESUME: 'resume',
+  SKILLS: 'skills',
   PROJECTS: 'projects',
+  RESUME: 'resume',
   CONTACT: 'contact',
 };
