@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import {Colors} from 'src/assets';
+
 export const StyledBurger = styled.button<{open: boolean}>`
   display: flex;
   flex-direction: column;
@@ -10,14 +12,14 @@ export const StyledBurger = styled.button<{open: boolean}>`
   border: none;
   cursor: pointer;
   position: absolute;
-  left: 1rem;
-  top: 1rem;
+  left: 2rem;
+  top: 2rem;
   padding: 0;
   z-index: 10;
   span {
     width: 2rem;
     height: 0.25rem;
-    background: var(--color-text);
+    background: ${Colors.white};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;

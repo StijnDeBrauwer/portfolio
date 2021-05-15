@@ -31,7 +31,10 @@ const addFontVariablesToStylesheet = () => {
     const fontFamily: Record<string, string> =
       families[family as keyof typeof families];
     for (const type in fontFamily) {
-      addStyleVariableToStylesheet(`--font-family-${family}`, fontFamily[type]);
+      addStyleVariableToStylesheet(
+        `--font-family-${family}-${type}`,
+        fontFamily[type]
+      );
     }
   }
 };
