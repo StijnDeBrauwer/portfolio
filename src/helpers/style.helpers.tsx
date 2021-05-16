@@ -52,3 +52,5 @@ export const initCssVariables = () => {
   addFontVariablesToStylesheet();
   addColorVariablesToStylesheet();
 };
+
+export const getNumberOfSizeUnit = () => {};

@@ -15,6 +15,7 @@ const sizes = {
   large: '1rem',
   xlarge: '1.125rem',
   xxlarge: '1.5rem',
+  xxxlarge: '2.5rem',
 };
 
 export default {

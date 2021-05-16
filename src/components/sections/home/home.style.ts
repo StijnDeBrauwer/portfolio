@@ -50,7 +50,12 @@ export const WelcomeMessage = styled.p<{state: TransitionStatus}>`
 
     color: ${Colors.white};
     font-size: ${Fonts.sizes.xxlarge};
+
+    h1{
+      color: ${Colors.white}
+    }
   }
+
 
   b{
     color ${Colors.accent}

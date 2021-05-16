@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import {Colors} from 'src/assets';
+import {Colors, Metrics} from 'src/assets';
 
 export const StyledBurger = styled.button<{open: boolean}>`
   display: flex;
@@ -12,10 +12,16 @@ export const StyledBurger = styled.button<{open: boolean}>`
   border: none;
   cursor: pointer;
   position: absolute;
-  left: 2rem;
-  top: 2rem;
+  left: 1rem;
+  top: 1rem;
   padding: 0;
   z-index: 10;
+
+  @media ${Metrics.mediaQueries.tablet} {
+    left: ${Metrics.desktopMargin};
+    top: ${Metrics.desktopMargin};
+  }
+
   span {
     width: 2rem;
     height: 0.25rem;

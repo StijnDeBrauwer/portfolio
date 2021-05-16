@@ -19,6 +19,8 @@ const Metrics = {
     desktop: `(min-width: ${deviceWidths.desktop})`,
     desktopL: `(min-width: ${deviceWidths.desktop})`,
   },
+
+  desktopMargin: '3vw',
 };
 
 export default Metrics;
