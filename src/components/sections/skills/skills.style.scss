@@ -5,7 +5,7 @@
     background-color: var(--color-lightGrey);
 
     @media (min-width: 768px) {
-        padding: 1rem 3vw;
+        // padding: 1rem 3vw;
         width: calc(100% - 6vw);
         align-items: flex-start;
 
@@ -33,7 +33,7 @@
             padding: 1rem;
 
             @media (min-width: 768px) {
-                padding: 1rem 3vw;
+                // padding: 1rem 3vw;
                 width: calc(100% - 6vw);
                 align-items: flex-start;
             }
