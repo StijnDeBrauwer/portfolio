@@ -4,6 +4,7 @@ import HomeSection from 'src/components/sections/home/home.component';
 import Hamburger from 'src/components/navigation/hamburger/hamburger.component';
 import AboutSection from 'src/components/sections/about/about.component';
 import SkillsSection from 'src/components/sections/skills/skills.component';
+import ProjectSection from 'src/components/sections/projects/projects.component';
 import {ActiveSectionContext} from 'src/context/activeSection.context';
 import {PortfolioRoutes} from 'src/config/routes.config';
 
@@ -11,10 +12,9 @@ const HomePage = () => {
   const [open, setOpen] = useState(false);
 
   const home = useRef<HTMLDivElement>(null);
-
   const about = useRef<HTMLDivElement>(null);
-
   const skills = useRef<HTMLDivElement>(null);
+  const projects = useRef<HTMLDivElement>(null);
 
   const {setActiveSection} = useContext(ActiveSectionContext);
 
@@ -31,18 +31,20 @@ const HomePage = () => {
   const handleScroll = () => {
     const scroll = window.pageYOffset;
 
-    const yPosAbout: number | null =
-      (about.current && about.current.offsetTop) || 0;
+    const yPosAbout = (about.current && about.current.offsetTop) || 0;
 
-    const yPosSkills: number | null =
-      (skills.current && skills.current.offsetTop) || 0;
+    const yPosSkills = (skills.current && skills.current.offsetTop) || 0;
+
+    const yPosProjects = (projects.current && projects.current.offsetTop) || 0;
 
     if (scroll < yPosAbout) {
       setActiveSection(PortfolioRoutes.HOME);
     } else if (scroll < yPosSkills) {
       setActiveSection(PortfolioRoutes.ABOUT);
-    } else {
+    } else if (scroll < yPosProjects) {
       setActiveSection(PortfolioRoutes.SKILLS);
+    } else {
+      setActiveSection(PortfolioRoutes.PROJECTS);
     }
   };
 
@@ -56,6 +58,9 @@ const HomePage = () => {
 
   const scrollToSkills = () => {
     skills.current?.scrollIntoView();
+  };
+  const scrollToProjects = () => {
+    projects.current?.scrollIntoView();
   };
 
   const handleMenuClose = (open: boolean, route?: PortfolioRoutes) => {
@@ -71,6 +76,9 @@ const HomePage = () => {
         case PortfolioRoutes.SKILLS:
           scrollToSkills();
           break;
+        case PortfolioRoutes.PROJECTS:
+          scrollToProjects();
+          break;
       }
     }
   };
@@ -81,6 +89,7 @@ const HomePage = () => {
       <HomeSection ref={home} scrollToAbout={scrollToAbout} />
       <AboutSection ref={about} />
       <SkillsSection ref={skills} />
+      <ProjectSection ref={projects} />
     </div>
   );
 };
