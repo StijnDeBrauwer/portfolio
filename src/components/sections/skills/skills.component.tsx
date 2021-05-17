@@ -1,6 +1,7 @@
 import React from 'react';
 
 import BarChart from 'src/components/barChart/barChart.component';
+import {withSection} from 'src/hoc/withSection/withSection.hoc';
 
 import './skills.style.scss';
 
@@ -61,4 +62,4 @@ const SkillsSection = () => {
   );
 };
 
-export default SkillsSection;
+export default withSection(SkillsSection);

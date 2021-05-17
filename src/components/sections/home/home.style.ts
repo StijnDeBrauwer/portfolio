@@ -14,9 +14,6 @@ export const StyledHomeSection = styled.div`
   background-size: 100% 100%;
   background-repeat: no-repeat;
 
-  height: 100vh;
-  width: 100vw;
-
   @media ${Metrics.mediaQueries.tablet} {
     background-image: url(${Images.homeDesktop}),
       linear-gradient(10deg, rgba(40, 48, 48, 1) 14%, rgba(57, 85, 91, 1) 100%);

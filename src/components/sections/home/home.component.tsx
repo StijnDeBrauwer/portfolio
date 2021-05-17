@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, FC} from 'react';
 import {Transition, TransitionGroup} from 'react-transition-group';
 
 import Icon from 'src/components/icon/icon.component';
@@ -6,6 +6,7 @@ import {IconNames} from 'src/components/icon/icon.type';
 import {Colors} from 'src/assets';
 import Button from 'src/components/button/button.component';
 import {useIsDesktop} from 'src/hooks/useIsDesktop.hook';
+import {withSection} from 'src/hoc/withSection/withSection.hoc';
 
 import {
   StyledHomeSection,
@@ -13,9 +14,11 @@ import {
   WelcomeMessage,
   StyledButtonContainer,
 } from './home.style';
-import {HomeText} from './home.type';
+import {HomeSectionProps, HomeText} from './home.type';
 
-const HomeSection = () => {
+const HomeSection: FC<HomeSectionProps> = ({
+  scrollToAbout,
+}: HomeSectionProps) => {
   const [text, setText] = useState<HomeText | undefined>();
   const isDesktop = useIsDesktop();
 
@@ -36,8 +39,6 @@ const HomeSection = () => {
       });
     });
   };
-
-  const navigateToNextPage = () => {};
 
   return (
     <StyledHomeSection>
@@ -70,8 +71,8 @@ const HomeSection = () => {
               <Icon name={IconNames.ChevronDown} size={30} />
             </StyledIcon>
           ) : (
-            <StyledButtonContainer state={state} onClick={navigateToNextPage}>
-              <Button onClick={navigateToNextPage}>
+            <StyledButtonContainer state={state} onClick={scrollToAbout}>
+              <Button onClick={scrollToAbout}>
                 View my portfolio
                 <Icon
                   name={IconNames.ChevronRight}
@@ -89,4 +90,4 @@ const HomeSection = () => {
   );
 };
 
-export default HomeSection;
+export default withSection<HomeSectionProps>(HomeSection);
