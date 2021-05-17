@@ -16,22 +16,22 @@ export const StyledMenu = styled.nav<{open: boolean}>`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
   transition: transform 0.3s ease-in-out;
   @media (max-width: 768px) {
-    position: fixed;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+   
   }
   
   .menu__link {
     font-size: ${Fonts.sizes.large};
     text-transform: uppercase;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
     color: ${Colors.white};
@@ -47,6 +47,7 @@ export const StyledMenu = styled.nav<{open: boolean}>`
     @media ${Metrics.mediaQueries.tablet} {
       font-size: ${Fonts.sizes.xlarge};
       text-align: center;
+      padding: 2rem 0;
     }
     &:hover {
       color:${Colors.accent};
