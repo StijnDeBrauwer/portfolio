@@ -21,6 +21,8 @@ const Metrics = {
   },
 
   desktopMargin: '3vw',
+  screenWidth: window.innerWidth,
+  screenHeight: window.innerHeight,
 };
 
 export default Metrics;

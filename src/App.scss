@@ -17,6 +17,19 @@ h1 {
   }
 }
 
+h2 {
+  color: var(--color-text);
+  font-size: var(--font-size-xlarge);
+  font-family: var(--font-family-rubik-medium);
+
+  text-align: center;
+
+  @media (min-width: 768px) {
+    text-align: left;
+    font-size: var(--font-size-xxlarge);
+  }
+}
+
 p {
   text-align: center;
 

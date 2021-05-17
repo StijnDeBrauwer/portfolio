@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import {Colors} from 'src/assets';
+import {Colors, Metrics} from 'src/assets';
 
 export const StyledMenu = styled.nav<{open: boolean}>`
   display: flex;
@@ -9,10 +9,11 @@ export const StyledMenu = styled.nav<{open: boolean}>`
   background ${Colors.primary};
   transform: ${({open}) => (open ? 'translateX(0)' : 'translateX(-100%)')};
   height: 100vh;
+  width: 25vw;
   box-shadow: ${({open}) => (open ? '5px 0 5px -2px rgba(0,0,0,.5)' : 'unset')};
   text-align: left;
-  padding: 2rem;
-  position: absolute;
+  padding: 2rem 2rem 2rem ${Metrics.desktopMargin};
+  position: fixed;
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
@@ -26,6 +27,7 @@ export const StyledMenu = styled.nav<{open: boolean}>`
     height: 100%;
     z-index: 1;
   }
+  
   .menu__link {
     font-size: 1.25rem;
     text-transform: uppercase;
@@ -42,5 +44,6 @@ export const StyledMenu = styled.nav<{open: boolean}>`
     &:hover {
       color:${Colors.accent};
     }
+    
   }
 `;

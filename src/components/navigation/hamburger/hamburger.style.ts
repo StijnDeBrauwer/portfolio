@@ -11,7 +11,7 @@ export const StyledBurger = styled.button<{open: boolean}>`
   background: transparent;
   border: none;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   left: 1rem;
   top: 1rem;
   padding: 0;

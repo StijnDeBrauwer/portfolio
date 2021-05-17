@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import {Transition, TransitionGroup} from 'react-transition-group';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import Icon from 'src/components/icon/icon.component';
 import {IconNames} from 'src/components/icon/icon.type';
-import {Colors, Metrics} from 'src/assets';
+import {Colors} from 'src/assets';
 import Button from 'src/components/button/button.component';
+import {useIsDesktop} from 'src/hooks/useIsDesktop.hook';
 
 import {
   StyledHomeSection,
@@ -17,7 +17,7 @@ import {HomeText} from './home.type';
 
 const HomeSection = () => {
   const [text, setText] = useState<HomeText | undefined>();
-  const isTablet = useMediaQuery(Metrics.mediaQueries.tablet);
+  const isDesktop = useIsDesktop();
 
   useEffect(() => {
     startAnimation();
@@ -65,7 +65,7 @@ const HomeSection = () => {
 
       <Transition in={!!text && text === HomeText.ME} timeout={1000}>
         {(state) =>
-          !isTablet ? (
+          !isDesktop ? (
             <StyledIcon state={state}>
               <Icon name={IconNames.ChevronDown} size={30} />
             </StyledIcon>

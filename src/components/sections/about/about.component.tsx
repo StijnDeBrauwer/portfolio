@@ -1,18 +1,17 @@
 import React from 'react';
-import {useMediaQuery} from '@material-ui/core';
 
 import Image from 'src/components/image/image.component';
-import {Metrics} from 'src/assets';
+import {useIsDesktop} from 'src/hooks/useIsDesktop.hook';
 
 import './about.style.scss';
 
 const AboutSection = () => {
-  const isTablet = useMediaQuery(Metrics.mediaQueries.tablet);
+  const isDesktop = useIsDesktop();
 
   return (
     <section className={'about'}>
       <div className={'about__image'}>
-        <Image src={'me'} alt="me" size={isTablet ? 25 : 60} sizeUnit={'vw'} />
+        <Image src={'me'} alt="me" size={isDesktop ? 25 : 60} sizeUnit={'vw'} />
       </div>
       <div className={'about__text'}>
         <h1>About me</h1>

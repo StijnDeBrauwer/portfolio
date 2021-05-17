@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import HomeSection from 'src/components/sections/home/home.component';
 import Hamburger from 'src/components/navigation/hamburger/hamburger.component';
 import AboutSection from 'src/components/sections/about/about.component';
+import SkillsSection from 'src/components/sections/skills/skills.component';
 
 const HomePage = () => {
   const [open, setOpen] = useState(false);
@@ -12,6 +13,7 @@ const HomePage = () => {
       <Hamburger open={open} setOpen={setOpen} />
       <HomeSection />
       <AboutSection />
+      <SkillsSection />
     </div>
   );
 };
