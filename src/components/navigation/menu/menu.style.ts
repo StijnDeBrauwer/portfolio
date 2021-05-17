@@ -44,6 +44,10 @@ export const StyledMenu = styled.nav<{open: boolean}>`
     &:hover {
       color:${Colors.accent};
     }
+
+    &.active{
+      color:${Colors.accent};
+    }
     
   }
 `;

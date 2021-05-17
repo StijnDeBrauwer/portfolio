@@ -90,4 +90,4 @@ const HomeSection: FC<HomeSectionProps> = ({
   );
 };
 
-export default withSection<HomeSectionProps>(HomeSection);
+export default withSection(HomeSection);

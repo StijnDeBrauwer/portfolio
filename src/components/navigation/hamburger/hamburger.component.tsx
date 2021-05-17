@@ -19,7 +19,9 @@ const Hamburger: FC<HamburgerProps> = ({open, setOpen}: HamburgerProps) => {
 
   const handleScroll = () => {
     setColor(
-      window.pageYOffset > Metrics.screenHeight ? Colors.text : Colors.white
+      window.pageYOffset > Metrics.screenHeight - 50
+        ? Colors.text
+        : Colors.white
     );
   };
 
