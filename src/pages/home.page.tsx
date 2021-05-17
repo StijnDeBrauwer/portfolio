@@ -19,6 +19,8 @@ const HomePage = () => {
   const {setActiveSection} = useContext(ActiveSectionContext);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     window.addEventListener('scroll', handleScroll);
 
     return () => {

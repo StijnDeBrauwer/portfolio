@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import {Colors, Metrics} from 'src/assets';
+import {Colors, Fonts, Metrics} from 'src/assets';
 
 export const StyledMenu = styled.nav<{open: boolean}>`
   display: flex;
@@ -29,7 +29,7 @@ export const StyledMenu = styled.nav<{open: boolean}>`
   }
   
   .menu__link {
-    font-size: 1.25rem;
+    font-size: ${Fonts.sizes.large};
     text-transform: uppercase;
     padding: 2rem 0;
     font-weight: bold;
@@ -37,8 +37,15 @@ export const StyledMenu = styled.nav<{open: boolean}>`
     color: ${Colors.white};
     text-decoration: none;
     transition: color 0.3s linear;
-    @media (max-width: ${({theme}) => theme.mobile}) {
-      font-size: 1rem;
+    cursor: pointer;
+
+    @media ${Metrics.mediaQueries.mobileS} {
+      font-size: ${Fonts.sizes.regular};
+      text-align: center;
+    }
+
+    @media ${Metrics.mediaQueries.tablet} {
+      font-size: ${Fonts.sizes.xlarge};
       text-align: center;
     }
     &:hover {
