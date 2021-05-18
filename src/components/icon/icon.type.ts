@@ -21,4 +21,6 @@ export interface IconProps {
   style?: CSSProperties;
   size?: number | string;
   fill?: string;
+
+  onClick?: () => void;
 }

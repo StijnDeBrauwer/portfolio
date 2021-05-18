@@ -1,4 +1,8 @@
+$svg-height: 75px;
+$container-top: $svg-height + 16px;
+
 .contact {
+    flex: 1;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -7,7 +11,9 @@
 
     h1 {
         color: var(--color-white);
-        padding-top: 80px;
+        padding-top: $container-top;
+
+        text-align: center;
     }
 
     .contact__svg {
@@ -19,6 +25,93 @@
 
     .contact__content {
         flex-grow: 1;
+        align-self: stretch;
+        align-items: center;
+
+        width: 100vw;
         background-image: linear-gradient(10deg, rgba(40, 48, 48, 1) 14%, rgba(57, 85, 91, 1) 100%);
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin: 0 2rem;
+
+            .form__content {
+                border-radius: 10px;
+                background-color: var(--color-text);
+
+                align-self: stretch;
+
+                @media (min-width: 768px) {
+                    align-self: center;
+                    width: 75vw;
+                }
+
+                .input-item {
+                    border-bottom: 2px solid black;
+                    padding: 1rem;
+
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+
+                    .MuiFormControl-root {
+                        width: 100%;
+                        border-bottom: 0;
+                        &:before {
+                            border-bottom: 0;
+                        }
+
+                        input,
+                        textarea {
+                            color: var(--color-white) !important;
+                            font-family: var(--font-family-rubik-medium) !important;
+                            font-size: var(--font-size-regular);
+                        }
+
+                        label {
+                            color: var(--color-white) !important;
+                            font-family: var(--font-family-rubik-medium) !important;
+                            font-size: var(--font-size-regular);
+                        }
+
+                        * {
+                            border-bottom: 0 !important;
+                            &:before {
+                                border-bottom: 0 !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .form__button {
+                margin-top: 1rem;
+                min-width: 25vw;
+                align-self: stretch;
+                padding: 10px;
+
+                @media (min-width: 768px) {
+                    max-width: 150px;
+                    align-self: center;
+                }
+            }
+        }
+
+        .content__social-media {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 1rem;
+
+            & > svg {
+                cursor: pointer;
+                margin: 0 1rem;
+                fill: var(--color-white);
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
     }
 }

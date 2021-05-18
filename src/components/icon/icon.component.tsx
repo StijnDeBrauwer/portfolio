@@ -11,11 +11,13 @@ const Icon: FC<IconProps> = ({
   style,
   stroke,
   fill,
+  onClick,
 }: IconProps) => {
   const IconComponent = ICONS[name];
 
   return (
     <IconComponent
+      onClick={onClick}
       color={color}
       width={size}
       height={size}
