@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.91052036.chunk.css",
+    "main.css": "/portfolio/static/css/main.5a4dbebe.chunk.css",
     "main.js": "/portfolio/static/js/main.62670466.chunk.js",
     "main.js.map": "/portfolio/static/js/main.62670466.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.76232b81.js",
@@ -8,7 +8,7 @@
     "static/js/2.59afa079.chunk.js": "/portfolio/static/js/2.59afa079.chunk.js",
     "static/js/2.59afa079.chunk.js.map": "/portfolio/static/js/2.59afa079.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/css/main.91052036.chunk.css.map": "/portfolio/static/css/main.91052036.chunk.css.map",
+    "static/css/main.5a4dbebe.chunk.css.map": "/portfolio/static/css/main.5a4dbebe.chunk.css.map",
     "static/js/2.59afa079.chunk.js.LICENSE.txt": "/portfolio/static/js/2.59afa079.chunk.js.LICENSE.txt",
     "static/media/fonts.style.scss": "/portfolio/static/media/Rubik-SemiBold.779458cb.ttf",
     "static/media/bprint.f2e3200e.png": "/portfolio/static/media/bprint.f2e3200e.png",
@@ -32,7 +32,7 @@
   "entrypoints": [
     "static/js/runtime-main.76232b81.js",
     "static/js/2.59afa079.chunk.js",
-    "static/css/main.91052036.chunk.css",
+    "static/css/main.5a4dbebe.chunk.css",
     "static/js/main.62670466.chunk.js"
   ]
 }
