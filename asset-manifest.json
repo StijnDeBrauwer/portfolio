@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.91052036.chunk.css",
-    "main.js": "/portfolio/static/js/main.1483d1a0.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.1483d1a0.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.58f66656.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.58f66656.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.76232b81.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.76232b81.js.map",
     "static/js/2.59afa079.chunk.js": "/portfolio/static/js/2.59afa079.chunk.js",
@@ -19,7 +19,7 @@
     "static/media/embed2.ab9f3a26.svg": "/portfolio/static/media/embed2.ab9f3a26.svg",
     "static/media/github.de052392.svg": "/portfolio/static/media/github.de052392.svg",
     "static/media/home-desktop.e27ca111.png": "/portfolio/static/media/home-desktop.e27ca111.png",
-    "static/media/home-mobile.091cbd4e.png": "/portfolio/static/media/home-mobile.091cbd4e.png",
+    "static/media/home-mobile.485418e8.png": "/portfolio/static/media/home-mobile.485418e8.png",
     "static/media/linkedin.95ba3b56.svg": "/portfolio/static/media/linkedin.95ba3b56.svg",
     "static/media/me.fb310775.png": "/portfolio/static/media/me.fb310775.png",
     "static/media/ncsp.0b5bdebe.png": "/portfolio/static/media/ncsp.0b5bdebe.png",
@@ -33,6 +33,6 @@
     "static/js/runtime-main.76232b81.js",
     "static/js/2.59afa079.chunk.js",
     "static/css/main.91052036.chunk.css",
-    "static/js/main.1483d1a0.chunk.js"
+    "static/js/main.58f66656.chunk.js"
   ]
 }
