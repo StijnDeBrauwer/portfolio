@@ -1,5 +1,86 @@
 .projects {
+    display: flex;
+    flex-direction: column;
     h1 {
         text-align: center;
+    }
+
+    &__container {
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 50vw;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .container__item {
+            display: flex;
+
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+
+            height: 100%;
+            width: 100%;
+
+            margin: 1rem 0;
+
+            cursor: pointer;
+
+            @media (min-width: 768px) {
+                width: calc(100% / 3 - 2rem);
+                height: calc(50% - 2rem);
+            }
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: 0.5s ease;
+                background-color: var(--color-accent);
+            }
+
+            &:hover .overlay {
+                opacity: 0.95;
+            }
+
+            .text {
+                color: white;
+                font-size: 1.5rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                text-align: center;
+
+                &.dark {
+                    color: var(--color-text);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            img {
+                width: 100%;
+                object-fit: contain;
+                align-self: stretch;
+            }
+        }
     }
 }

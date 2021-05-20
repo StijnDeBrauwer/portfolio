@@ -120,6 +120,11 @@ $container-top: $svg-height + 16px;
                 fill: var(--color-white);
                 width: 1.5rem;
                 height: 1.5rem;
+
+                @media (min-width: 768px) {
+                    width: 3vw;
+                    height: 3vw;
+                }
             }
         }
     }
