@@ -36,7 +36,7 @@ const HomePage = () => {
   }, []);
 
   const handleScroll = () => {
-    const scroll = window.pageYOffset;
+    const scroll = window.pageYOffset + window.innerWidth / 3;
 
     const yPosAbout = (about.current && about.current.offsetTop) || 0;
     const yPosSkills = (skills.current && skills.current.offsetTop) || 0;

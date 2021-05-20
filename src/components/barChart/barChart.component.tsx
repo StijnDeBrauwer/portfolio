@@ -32,7 +32,7 @@ const BarChart: FC<BarChartProps> = ({
         clearInterval(interval);
       }
     };
-  }, [value, currentPercentage]);
+  }, [value, currentPercentage, percentage]);
 
   return (
     <StyledBarChart width={width} backgroundColor={backgroundColor}>

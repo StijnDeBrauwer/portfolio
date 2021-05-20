@@ -22,7 +22,7 @@ const AboutSection = () => {
           <span className="text__accent">frontend developer.</span>
         </p>
         <p>
-          I could say my second laguage besides dutch is{' '}
+          I could say my second language besides Dutch is{' '}
           <span className="text__accent">Javascript </span> (preferably
           Typescript).
         </p>
@@ -32,7 +32,7 @@ const AboutSection = () => {
           But I prefer to work with <span className="text__accent">React</span>.
         </p>
         <p>
-          I am real <span className="text__accent">teamplayer</span>, that is
+          I am a real <span className="text__accent">teamplayer</span>, that is
           why a friendly work environment is very important to me.
         </p>
         <p>

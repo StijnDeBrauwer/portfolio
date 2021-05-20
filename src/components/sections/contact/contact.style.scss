@@ -5,6 +5,7 @@ $container-top: $svg-height + 16px;
     flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     min-height: 100vh;
 
     position: relative;
@@ -67,12 +68,20 @@ $container-top: $svg-height + 16px;
                             color: var(--color-white) !important;
                             font-family: var(--font-family-rubik-medium) !important;
                             font-size: var(--font-size-regular);
+
+                            @media (min-width: 768px) {
+                                font-size: var(--font-size-large);
+                            }
                         }
 
                         label {
                             color: var(--color-white) !important;
                             font-family: var(--font-family-rubik-medium) !important;
                             font-size: var(--font-size-regular);
+
+                            @media (min-width: 768px) {
+                                font-size: var(--font-size-large);
+                            }
                         }
 
                         * {

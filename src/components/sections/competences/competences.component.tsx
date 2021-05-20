@@ -32,7 +32,9 @@ const CompetencesSection = () => {
             <h2>Flexible</h2>
           </div>
           <div className="card__content">
-            I can describe myself as flexible in time, scope and in a team.
+            I can describe myself as flexible in time, scope and in a team. In
+            my &apos;short&apos; technical career, I&apos;ve proven to be very
+            flexible in projects.
           </div>
         </Card>
 
@@ -43,8 +45,8 @@ const CompetencesSection = () => {
           </div>
           <div className="card__content">
             Programming is a passion of mine. I love to read blogs and keep
-            myself posted with the latest best practices both in my free time as
-            in my professional career.
+            myself posted with the latest best practices both in my spare time
+            as in my professional career.
           </div>
         </Card>
 
@@ -54,8 +56,9 @@ const CompetencesSection = () => {
             <h2>Customer oriented</h2>
           </div>
           <div className="card__content">
-            I love to work with others and share a common goal. Helping others
-            is in my nature.
+            A customer is very important in IT-projects. I love to interact with
+            them, but of course in a professional way. The relation between
+            clients and developers is a key to success in my opinion!
           </div>
         </Card>
       </div>
