@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.5a4dbebe.chunk.css",
-    "main.js": "/portfolio/static/js/main.3a366bea.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.3a366bea.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.4a42bd84.chunk.css",
+    "main.js": "/portfolio/static/js/main.c9d5358b.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.c9d5358b.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.76232b81.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.76232b81.js.map",
     "static/js/2.59afa079.chunk.js": "/portfolio/static/js/2.59afa079.chunk.js",
     "static/js/2.59afa079.chunk.js.map": "/portfolio/static/js/2.59afa079.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/css/main.5a4dbebe.chunk.css.map": "/portfolio/static/css/main.5a4dbebe.chunk.css.map",
+    "static/css/main.4a42bd84.chunk.css.map": "/portfolio/static/css/main.4a42bd84.chunk.css.map",
     "static/js/2.59afa079.chunk.js.LICENSE.txt": "/portfolio/static/js/2.59afa079.chunk.js.LICENSE.txt",
     "static/media/fonts.style.scss": "/portfolio/static/media/Rubik-SemiBold.779458cb.ttf",
     "static/media/bprint.f2e3200e.png": "/portfolio/static/media/bprint.f2e3200e.png",
@@ -32,7 +32,7 @@
   "entrypoints": [
     "static/js/runtime-main.76232b81.js",
     "static/js/2.59afa079.chunk.js",
-    "static/css/main.5a4dbebe.chunk.css",
-    "static/js/main.3a366bea.chunk.js"
+    "static/css/main.4a42bd84.chunk.css",
+    "static/js/main.c9d5358b.chunk.js"
   ]
 }
