@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       &copy; Stijn De Brauwer
-      <div className="year">&copy; {currentYear} </div>
+      <div className="year"> {currentYear} </div>
     </StyledFooter>
   );
 };
