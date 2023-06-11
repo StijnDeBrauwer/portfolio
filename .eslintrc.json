@@ -26,7 +26,9 @@
     "@typescript-eslint"
   ],
   "rules": {
-   "no-unused-vars": "off"
+   "no-unused-vars": "off",
+   "react/display-name": "off",
+   "no-empty-pattern": "off"
   },
   "settings": {
     "import/internal-regex": "^src/.+"
