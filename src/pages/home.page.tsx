@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useRef, useState} from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 
 import HomeSection from 'src/components/sections/home/home.component';
 import Hamburger from 'src/components/navigation/hamburger/hamburger.component';
@@ -8,9 +8,9 @@ import ProjectSection from 'src/components/sections/projects/projects.component'
 import CompetencesSection from 'src/components/sections/competences/competences.component';
 import ContactSection from 'src/components/sections/contact/contact.component';
 import ResumeSection from 'src/components/sections/resume/resume.component';
-import {ActiveSectionContext} from 'src/context/activeSection.context';
-import {PortfolioRoutes} from 'src/config/routes.config';
-import {scrollRefIntoViewport} from 'src/helpers/scroll.helper';
+import { ActiveSectionContext } from 'src/context/activeSection.context';
+import { PortfolioRoutes } from 'src/config/routes.config';
+import { scrollRefIntoViewport } from 'src/helpers/scroll.helper';
 
 const HomePage = () => {
   const [open, setOpen] = useState(false);
@@ -23,7 +23,7 @@ const HomePage = () => {
   const resume = useRef<HTMLDivElement>(null);
   const contact = useRef<HTMLDivElement>(null);
 
-  const {setActiveSection} = useContext(ActiveSectionContext);
+  const { setActiveSection } = useContext(ActiveSectionContext);
 
   useEffect(() => {
     window.scrollTo(0, 0);

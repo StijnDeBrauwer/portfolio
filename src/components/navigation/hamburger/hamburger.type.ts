@@ -1,4 +1,4 @@
-import {PortfolioRoutes} from 'src/config/routes.config';
+import { PortfolioRoutes } from 'src/config/routes.config';
 
 export interface HamburgerProps {
   open: boolean;

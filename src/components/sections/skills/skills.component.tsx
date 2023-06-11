@@ -1,14 +1,14 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 import BarChart from 'src/components/barChart/barChart.component';
-import {withSection} from 'src/hoc/withSection/withSection.hoc';
-import {PortfolioRoutes} from 'src/config/routes.config';
-import {ActiveSectionContext} from 'src/context/activeSection.context';
+import { withSection } from 'src/hoc/withSection/withSection.hoc';
+import { PortfolioRoutes } from 'src/config/routes.config';
+import { ActiveSectionContext } from 'src/context/activeSection.context';
 
 import './skills.style.scss';
 
 const SkillsSection = () => {
-  const {activeSection} = useContext(ActiveSectionContext);
+  const { activeSection } = useContext(ActiveSectionContext);
 
   const [initedInViewport, setInitedInViewport] = useState<boolean>();
 
@@ -36,36 +36,42 @@ const SkillsSection = () => {
         </p>
 
         <p>
+          I had the chance to work on a NodeJS project. But that’s a while ago.
+          I could not describe myself as a backend developer. But this is on my
+          to-do list. I would love to deepdive into the world of Backend
+          development!
+        </p>
+
+        <p>
           Swift/Objective C is not completely an unknown area for me. I try to
           extend my knowledge in this field in my spare time. But it comes handy
           in React Native development.{' '}
         </p>
-
-        <p>
-          I had the chance to work on a NodeJS project. But that’s a while ago.
-          I could not describe myself as a backend developer. But this is on my
-          to-do list.
-        </p>
       </div>
       <div className="skills_chart">
         <div className="chart__item">
-          <h2>React/React Native</h2>
+          <h2>Typescript</h2>
+          <BarChart percentage={initedInViewport ? 100 : 0} />
+        </div>
+
+        <div className="chart__item">
+          <h2>React</h2>
           <BarChart percentage={initedInViewport ? 90 : 0} />
         </div>
 
         <div className="chart__item">
           <h2>Angular</h2>
-          <BarChart percentage={initedInViewport ? 60 : 0} />
-        </div>
-
-        <div className="chart__item">
-          <h2>Swift/Objective C</h2>
-          <BarChart percentage={initedInViewport ? 40 : 0} />
+          <BarChart percentage={initedInViewport ? 90 : 0} />
         </div>
 
         <div className="chart__item">
           <h2>NodeJS</h2>
-          <BarChart percentage={initedInViewport ? 20 : 0} />
+          <BarChart percentage={initedInViewport ? 50 : 0} />
+        </div>
+
+        <div className="chart__item">
+          <h2>Swift/Objective C</h2>
+          <BarChart percentage={initedInViewport ? 30 : 0} />
         </div>
       </div>
     </section>

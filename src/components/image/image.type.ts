@@ -1,4 +1,4 @@
-import {Colors, Images} from 'src/assets';
+import { Colors, Images } from 'src/assets';
 
 export interface ImageProps {
   src: keyof typeof Images;

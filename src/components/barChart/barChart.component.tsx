@@ -1,9 +1,9 @@
-import React, {FC, useEffect, useRef, useState} from 'react';
+import React, { FC, useEffect, useRef, useState } from 'react';
 
-import {Colors} from 'src/assets';
+import { Colors } from 'src/assets';
 
-import {StyledBarChart} from './barChart.style';
-import {BarChartProps} from './barChart.type';
+import { StyledBarChart } from './barChart.style';
+import { BarChartProps } from './barChart.type';
 
 const BarChart: FC<BarChartProps> = ({
   width = 100,
@@ -36,7 +36,7 @@ const BarChart: FC<BarChartProps> = ({
 
   return (
     <StyledBarChart width={width} backgroundColor={backgroundColor}>
-      <div style={{width: `${value}%`}} className="progress" />
+      <div style={{ width: `${value}%` }} className="progress" />
     </StyledBarChart>
   );
 };

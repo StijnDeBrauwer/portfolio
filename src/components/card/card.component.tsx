@@ -1,11 +1,16 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 
-import {StyledCard} from './card.style';
-import {CardProps} from './card.type';
+import { StyledCard } from './card.style';
+import { CardProps } from './card.type';
 
-const Card: FC<CardProps> = ({children, className, style}: CardProps) => {
+const Card: FC<CardProps> = ({
+  children,
+  className,
+  style,
+  onClick,
+}: CardProps) => {
   return (
-    <StyledCard className={className} style={style}>
+    <StyledCard className={className} style={style} onClick={onClick}>
       {children}
     </StyledCard>
   );

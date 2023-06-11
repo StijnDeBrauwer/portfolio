@@ -1,4 +1,4 @@
-import {WithSectionProps} from 'src/hoc/withSection/withSection.type';
+import { WithSectionProps } from 'src/hoc/withSection/withSection.type';
 
 export enum HomeText {
   INTRO = '<h1>Hello</h1>',

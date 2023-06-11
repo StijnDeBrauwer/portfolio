@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import {Metrics, Colors} from 'src/assets';
+import { Metrics, Colors } from 'src/assets';
 
-export const StyledBurger = styled.button<{open: boolean; color: string}>`
+export const StyledBurger = styled.button<{ open: boolean; color: string }>`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -25,21 +25,21 @@ export const StyledBurger = styled.button<{open: boolean; color: string}>`
   span {
     width: 2rem;
     height: 0.25rem;
-    background: ${({color, open}) => (open ? Colors.white : color)};
+    background: ${({ color, open }) => (open ? Colors.white : color)};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     :first-child {
-      transform: ${({open}) => (open ? 'rotate(45deg)' : 'rotate(0)')};
+      transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
     }
     :nth-child(2) {
-      opacity: ${({open}) => (open ? '0' : '1')};
-      transform: ${({open}) => (open ? 'translateX(20px)' : 'translateX(0)')};
+      opacity: ${({ open }) => (open ? '0' : '1')};
+      transform: ${({ open }) => (open ? 'translateX(20px)' : 'translateX(0)')};
     }
     :nth-child(3) {
-      transform: ${({open}) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
+      transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
     }
   }
 `;

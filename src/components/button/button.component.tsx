@@ -1,7 +1,7 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 
-import {StyledButton} from './button.style';
-import {ButtonProps} from './button.type';
+import { StyledButton } from './button.style';
+import { ButtonProps } from './button.type';
 
 const Button: FC<ButtonProps> = ({
   children,

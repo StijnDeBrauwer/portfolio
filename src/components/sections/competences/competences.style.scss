@@ -1,92 +1,103 @@
 .competences {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--color-lightGrey);
+
+  h1 {
+    text-align: center;
+  }
+
+  .intro {
+    text-align: center;
+    font-size: var(--font-size-regular);
+  }
+
+  .card-container {
     display: flex;
     flex-direction: column;
 
-    background-color: var(--color-lightGrey);
+    align-self: center;
 
-    h1 {
-        text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+      display: grid;
+
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 50% 50%;
+
+      align-items: center;
+      justify-items: center;
+
+      width: 100%;
+      height: 100%;
     }
 
-    .card-container {
+    .card {
+      background-color: var(--color-white);
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+      align-items: center;
+
+      margin: 0.5rem 0;
+
+      width: 75vw;
+
+      box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1);
+
+      cursor: pointer;
+
+      @media (min-width: 768px) {
+        flex: 1;
+        margin: 0.5rem;
+
+        max-width: 400px;
+
+        min-height: 200px;
+      }
+
+      align-items: center;
+
+      &__header {
+        flex-shrink: 1;
+        width: 100%;
+
         display: flex;
         flex-direction: column;
 
-        align-self: center;
+        padding: 1rem 0;
 
         align-items: center;
+
+        h2 {
+          text-align: center;
+          font-size: var(--font-size-large);
+          font-family: var(--font-family-rubik-light);
+        }
+
+        svg {
+          width: 35px;
+          height: 35px;
+        }
+      }
+
+      &__content {
+        flex: 1;
+        text-align: center;
+
+        display: flex;
         justify-content: center;
+        align-items: center;
 
-        @media (min-width: 768px) {
-            display: grid;
+        padding: 1rem 0;
 
-            grid-template-columns: 50% 50%;
-            grid-template-rows: 50% 50%;
-
-            align-items: center;
-            justify-items: center;
-
-            width: 100%;
-            height: 100%;
-        }
-
-        .card {
-            background-color: var(--color-white);
-            display: flex;
-            flex-direction: column;
-
-            margin: 0.5rem 0;
-
-            width: 75vw;
-
-            box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1);
-
-            @media (min-width: 768px) {
-                flex: 1;
-                margin: 0.5rem;
-
-                max-width: 400px;
-
-                min-height: 200px;
-            }
-
-            align-items: center;
-
-            &__header {
-                flex-shrink: 1;
-                width: 100%;
-
-                display: flex;
-                flex-direction: column;
-
-                padding: 1rem 0;
-
-                align-items: center;
-
-                h2 {
-                    text-align: center;
-                    font-size: var(--font-size-large);
-                    font-family: var(--font-family-rubik-light);
-                }
-
-                svg {
-                    width: 35px;
-                    height: 35px;
-                }
-            }
-
-            &__content {
-                flex: 1;
-                text-align: center;
-
-                display: flex;
-                justify-content: center;
-
-                padding: 1rem 0;
-
-                font-size: var(--font-size-regular);
-                font-family: var(--font-family-rubik-light);
-            }
-        }
+        font-size: var(--font-size-regular);
+        font-family: var(--font-family-rubik-light);
+      }
     }
+  }
 }

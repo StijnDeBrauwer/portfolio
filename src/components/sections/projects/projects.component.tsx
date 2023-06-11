@@ -1,6 +1,5 @@
 import React from 'react';
-
-import {withSection} from 'src/hoc/withSection/withSection.hoc';
+import { withSection } from 'src/hoc/withSection/withSection.hoc';
 
 import './projects.style.scss';
 
@@ -16,7 +15,8 @@ const ProjectsSection = () => {
       <div className="projects__container">
         <div
           className="container__item"
-          onClick={() => navigateToUrl('https://www.newcrownservice.com/home')}>
+          onClick={() => navigateToUrl('https://www.newcrownservice.com/home')}
+        >
           <div className="text dark">NCSP</div>
           <div className="overlay">
             <div className="text">NCSP</div>
@@ -24,7 +24,8 @@ const ProjectsSection = () => {
         </div>
         <div
           className="container__item"
-          onClick={() => navigateToUrl('https://www.b-prints.be/#/home')}>
+          onClick={() => navigateToUrl('https://www.b-prints.be/#/home')}
+        >
           <div className="text dark">B-Prints</div>
           <div className="overlay">
             <div className="text">B-Prints</div>
@@ -34,7 +35,8 @@ const ProjectsSection = () => {
           className="container__item"
           onClick={() =>
             navigateToUrl('https://github.com/StijnDeBrauwer/PersonalWebsite')
-          }>
+          }
+        >
           <div className="text dark">Portfolio</div>
           <div className="overlay">
             <div className="text">Portfolio</div>
@@ -43,18 +45,9 @@ const ProjectsSection = () => {
         <div
           className="container__item"
           onClick={() =>
-            navigateToUrl('https://github.com/StijnDeBrauwer/rooigem-cms')
-          }>
-          <div className="text dark">Table tennis PWA</div>
-          <div className="overlay">
-            <div className="text">Table Tennis PWA</div>
-          </div>
-        </div>
-        <div
-          className="container__item"
-          onClick={() =>
             navigateToUrl('https://stijndebrauwer.github.io/op2c/#/home')
-          }>
+          }
+        >
           <div className="text dark">OP2C</div>
           <div className="overlay">
             <div className="text">OP2C</div>

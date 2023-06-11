@@ -1,7 +1,7 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 
-import {ICONS} from './icon.const';
-import {IconProps} from './icon.type';
+import { ICONS } from './icon.const';
+import { IconProps } from './icon.type';
 
 const Icon: FC<IconProps> = ({
   color,

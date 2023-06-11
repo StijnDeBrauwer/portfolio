@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Image from 'src/components/image/image.component';
-import {useIsDesktop} from 'src/hooks/useIsDesktop.hook';
-import {withSection} from 'src/hoc/withSection/withSection.hoc';
+import { useIsDesktop } from 'src/hooks/useIsDesktop.hook';
+import { withSection } from 'src/hoc/withSection/withSection.hoc';
 
 import './about.style.scss';
 

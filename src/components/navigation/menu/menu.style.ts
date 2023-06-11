@@ -1,16 +1,17 @@
 import styled from 'styled-components';
 
-import {Colors, Fonts, Metrics} from 'src/assets';
+import { Colors, Fonts, Metrics } from 'src/assets';
 
-export const StyledMenu = styled.nav<{open: boolean}>`
+export const StyledMenu = styled.nav<{ open: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
   background ${Colors.primary};
-  transform: ${({open}) => (open ? 'translateX(0)' : 'translateX(-100%)')};
+  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
   height: 100vh;
   width: 25vw;
-  box-shadow: ${({open}) => (open ? '5px 0 5px -2px rgba(0,0,0,.5)' : 'unset')};
+  box-shadow: ${({ open }) =>
+    open ? '5px 0 5px -2px rgba(0,0,0,.5)' : 'unset'};
   text-align: left;
   padding: 2rem 2rem 2rem ${Metrics.desktopMargin};
   position: fixed;

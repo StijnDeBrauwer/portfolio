@@ -1,12 +1,12 @@
-import React, {FC, useEffect, useState} from 'react';
+import React, { FC, useEffect, useState } from 'react';
 
 import Menu from 'src/components/navigation/menu/menu.component';
-import {Colors, Metrics} from 'src/assets';
+import { Colors, Metrics } from 'src/assets';
 
-import {StyledBurger} from './hamburger.style';
-import {HamburgerProps} from './hamburger.type';
+import { StyledBurger } from './hamburger.style';
+import { HamburgerProps } from './hamburger.type';
 
-const Hamburger: FC<HamburgerProps> = ({open, setOpen}: HamburgerProps) => {
+const Hamburger: FC<HamburgerProps> = ({ open, setOpen }: HamburgerProps) => {
   const [color, setColor] = useState<string>(Colors.white);
 
   useEffect(() => {
@@ -32,7 +32,8 @@ const Hamburger: FC<HamburgerProps> = ({open, setOpen}: HamburgerProps) => {
         aria-expanded={open}
         open={open}
         color={color}
-        onClick={() => setOpen(!open)}>
+        onClick={() => setOpen(!open)}
+      >
         <span />
         <span />
         <span />

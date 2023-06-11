@@ -1,6 +1,6 @@
-import React, {createContext, FC, PropsWithChildren, useState} from 'react';
+import React, { createContext, FC, PropsWithChildren, useState } from 'react';
 
-import {PortfolioRoutes} from 'src/config/routes.config';
+import { PortfolioRoutes } from 'src/config/routes.config';
 
 export interface ActiveSectionContextProps {
   activeSection: PortfolioRoutes;

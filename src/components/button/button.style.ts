@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import {Colors} from 'src/assets';
+import { Colors } from 'src/assets';
 
 export const StyledButton = styled.button`
   display: flex;

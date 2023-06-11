@@ -1,12 +1,12 @@
-import React, {useState, useEffect, FC} from 'react';
-import {Transition, TransitionGroup} from 'react-transition-group';
+import React, { useState, useEffect, FC } from 'react';
+import { Transition, TransitionGroup } from 'react-transition-group';
 
 import Icon from 'src/components/icon/icon.component';
-import {IconNames} from 'src/components/icon/icon.type';
-import {Colors} from 'src/assets';
+import { IconNames } from 'src/components/icon/icon.type';
+import { Colors } from 'src/assets';
 import Button from 'src/components/button/button.component';
-import {useIsDesktop} from 'src/hooks/useIsDesktop.hook';
-import {withSection} from 'src/hoc/withSection/withSection.hoc';
+import { useIsDesktop } from 'src/hooks/useIsDesktop.hook';
+import { withSection } from 'src/hoc/withSection/withSection.hoc';
 
 import {
   StyledHomeSection,
@@ -14,7 +14,7 @@ import {
   WelcomeMessage,
   StyledButtonContainer,
 } from './home.style';
-import {HomeSectionProps, HomeText} from './home.type';
+import { HomeSectionProps, HomeText } from './home.type';
 
 const HomeSection: FC<HomeSectionProps> = ({
   scrollToAbout,
@@ -27,15 +27,15 @@ const HomeSection: FC<HomeSectionProps> = ({
   }, []);
 
   const startAnimation = async (): Promise<void> => {
-    return new Promise<void>((resolve) => {
+    return new Promise<void>(resolve => {
       setText(HomeText.INTRO);
       resolve();
     }).then(() => {
-      return new Promise<void>((resolve) => {
+      return new Promise<void>(resolve => {
         setTimeout(() => {
           setText(HomeText.ME);
           resolve();
-        }, 4000);
+        }, 2000);
       });
     });
   };
@@ -49,8 +49,9 @@ const HomeSection: FC<HomeSectionProps> = ({
             // use the css transitionend event to mark the finish of a transition
             node.addEventListener('transitionend', done, false);
           }}
-          timeout={1000}>
-          {(state) => (
+          timeout={1000}
+        >
+          {state => (
             <>
               {/* // state change: exited -> entering -> entered -> exiting -> exited */}
               <WelcomeMessage
@@ -65,7 +66,7 @@ const HomeSection: FC<HomeSectionProps> = ({
       </TransitionGroup>
 
       <Transition in={!!text && text === HomeText.ME} timeout={1000}>
-        {(state) =>
+        {state =>
           !isDesktop ? (
             <StyledIcon state={state}>
               <Icon name={IconNames.ChevronDown} size={30} />

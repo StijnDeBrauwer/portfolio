@@ -1,4 +1,4 @@
-import {Fonts, Colors} from 'src/assets';
+import { Fonts, Colors } from 'src/assets';
 
 /**
  * Helper function that will add css variables to document
@@ -18,7 +18,7 @@ const addStyleVariableToStylesheet = (key: string, value: string) => {
  * Add all key - values that are added in the Fonts constant
  */
 const addFontVariablesToStylesheet = () => {
-  const {sizes, families} = Fonts;
+  const { sizes, families } = Fonts;
 
   for (const size in sizes) {
     addStyleVariableToStylesheet(

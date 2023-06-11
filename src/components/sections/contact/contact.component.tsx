@@ -1,17 +1,15 @@
-/* eslint-disable react/display-name */
-import React, {forwardRef} from 'react';
-import {TextField} from '@material-ui/core';
-import {useFormik} from 'formik';
+import React, { forwardRef } from 'react';
+import { useFormik } from 'formik';
+import { TextField } from '@mui/material';
 
-import {ReactComponent as Triangle} from 'src/assets/vectors/triangle.svg';
+import { ReactComponent as Triangle } from 'src/assets/vectors/triangle.svg';
 import Footer from 'src/components/footer/footer.component';
 import Icon from 'src/components/icon/icon.component';
-import {IconNames} from 'src/components/icon/icon.type';
+import { IconNames } from 'src/components/icon/icon.type';
 import Button from 'src/components/button/button.component';
 
 import './contact.style.scss';
 
-// eslint-disable-next-line no-empty-pattern
 const ContactSection = forwardRef<any, any>(({}, ref) => {
   const formik = useFormik({
     initialValues: {
@@ -19,7 +17,7 @@ const ContactSection = forwardRef<any, any>(({}, ref) => {
       subject: '',
       message: '',
     },
-    validate: (values) => {
+    validate: values => {
       const errors: Record<string, string> = {};
 
       if (!values.email) {
@@ -39,8 +37,8 @@ const ContactSection = forwardRef<any, any>(({}, ref) => {
 
       return errors;
     },
-    onSubmit: (values) => {
-      const {subject, message} = values;
+    onSubmit: values => {
+      const { subject, message } = values;
       window.open(
         `mailto:db_stijn@hotmail.com?subject=${subject}&body=${encodeURIComponent(
           message
@@ -66,14 +64,15 @@ const ContactSection = forwardRef<any, any>(({}, ref) => {
         <form
           onSubmit={formik.handleSubmit}
           method="post"
-          encType="multipart/form-data">
+          encType="multipart/form-data"
+        >
           <div className="form__content">
             <div className="input-item">
               <TextField
                 id="email"
                 type="email"
                 label="E-mail"
-                InputProps={{disableUnderline: true}}
+                InputProps={{ disableUnderline: true }}
                 variant="standard"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
@@ -86,7 +85,7 @@ const ContactSection = forwardRef<any, any>(({}, ref) => {
                 id="subject"
                 label="Subject"
                 variant="standard"
-                InputProps={{disableUnderline: true}}
+                InputProps={{ disableUnderline: true }}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.subject}
@@ -95,12 +94,12 @@ const ContactSection = forwardRef<any, any>(({}, ref) => {
             </div>
             <div className="input-item">
               <TextField
-                InputProps={{disableUnderline: true}}
+                InputProps={{ disableUnderline: true }}
                 id="message"
                 multiline
                 label="Message"
                 rows={3}
-                rowsMax={5}
+                maxRows={5}
                 variant="standard"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}

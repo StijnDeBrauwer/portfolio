@@ -1,9 +1,9 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 
-import {Images} from 'src/assets';
+import { Images } from 'src/assets';
 
-import {StyledImage} from './image.style';
-import {ImageProps} from './image.type';
+import { StyledImage } from './image.style';
+import { ImageProps } from './image.type';
 
 const Image: FC<ImageProps> = ({
   src,
@@ -20,7 +20,8 @@ const Image: FC<ImageProps> = ({
       sizeUnit={sizeUnit}
       size={size}
       hasShadow={hasBackShadow}
-      backShadowColor={backShadowColor}>
+      backShadowColor={backShadowColor}
+    >
       <img src={img} alt={alt} />
     </StyledImage>
   );

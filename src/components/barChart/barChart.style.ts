@@ -4,12 +4,12 @@ export const StyledBarChart = styled.div<{
   width: number;
   backgroundColor: string;
 }>`
-  width: ${(props) => props.width}%;
+  width: ${props => props.width}%;
   background-color: rgb(233, 233, 233);
   border-radius: 0.5rem;
 
   .progress {
-    background-color: ${(props) => props.backgroundColor};
+    background-color: ${props => props.backgroundColor};
     height: 10px;
     border-radius: 1rem;
     transition: 1s ease;

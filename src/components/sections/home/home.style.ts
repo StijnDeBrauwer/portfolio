@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import {TransitionStatus} from 'react-transition-group';
+import { TransitionStatus } from 'react-transition-group';
 
-import {Images, Metrics, Colors, Fonts} from 'src/assets';
+import { Images, Metrics, Colors, Fonts } from 'src/assets';
 
 export const StyledHomeSection = styled.div`
   display: flex;
@@ -22,7 +22,7 @@ export const StyledHomeSection = styled.div`
   }
 `;
 
-export const WelcomeMessage = styled.p<{state: TransitionStatus}>`
+export const WelcomeMessage = styled.p<{ state: TransitionStatus }>`
   text-align: center;
   
   font-size: ${Fonts.sizes.regular};
@@ -59,8 +59,9 @@ export const WelcomeMessage = styled.p<{state: TransitionStatus}>`
   }
 
   transition: 1s;
-  opacity: ${({state}) => (state === 'entered' || state === 'exiting' ? 1 : 0)};
-  display: ${({state}) =>
+  opacity: ${({ state }) =>
+    state === 'entered' || state === 'exiting' ? 1 : 0};
+  display: ${({ state }) =>
     state === 'exited' || state === 'exiting' ? 'none' : 'block'};
 `;
 
@@ -84,7 +85,7 @@ export const StyledIcon = styled.div<{
   align-items: center;
 
   transition: 1s;
-  opacity: ${({state}) => (state === 'entered' ? 1 : 0)};
+  opacity: ${({ state }) => (state === 'entered' ? 1 : 0)};
 
   animation: MoveUpDown 1s linear 6s;
 
@@ -104,5 +105,5 @@ export const StyledButtonContainer = styled.div<{
 }>`
   margin: 1rem 0 0 28vw;
   transition: 1s;
-  opacity: ${({state}) => (state === 'entered' ? 1 : 0)};
+  opacity: ${({ state }) => (state === 'entered' ? 1 : 0)};
 `;
