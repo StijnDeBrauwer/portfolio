@@ -6,7 +6,7 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background ${Colors.primary};
+  background: ${Colors.primary};
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
   height: 100vh;
   width: 25vw;
@@ -26,9 +26,8 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
     bottom: 0;
     width: 100%;
     height: 100%;
-   
   }
-  
+
   .menu__link {
     font-size: ${Fonts.sizes.large};
     text-transform: uppercase;
@@ -51,12 +50,11 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
       padding: 2rem 0;
     }
     &:hover {
-      color:${Colors.accent};
+      color: ${Colors.accent};
     }
 
-    &.active{
-      color:${Colors.accent};
+    &.active {
+      color: ${Colors.accent};
     }
-    
   }
 `;

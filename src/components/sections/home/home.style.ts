@@ -68,11 +68,6 @@ export const WelcomeMessage = styled.p<{ state: TransitionStatus }>`
 export const StyledIcon = styled.div<{
   state: TransitionStatus;
 }>`
-  position: absolute;
-  bottom: 35vh;
-  left: 0;
-  right: 0;
-
   text-align: center;
 
   @media ${Metrics.mediaQueries.tablet} {
@@ -92,10 +87,10 @@ export const StyledIcon = styled.div<{
   @keyframes MoveUpDown {
     0%,
     100% {
-      bottom: 35vh;
+      padding-top: 0;
     }
     50% {
-      bottom: calc(35vh + 10px);
+      padding-top: 10px;
     }
   }
 `;
